@@ -10,9 +10,15 @@ def add_time(func):
     return myinner
 
 @add_time
-def cooking():
-  print("cooking !")
+def cooking_breakfast():
+  print("Cooking breakfast")
   time.sleep(2)
 
+@add_time
+def cooking_lunch():
+  print("Cooking lunch")
+  time.sleep(4)
+
 if __name__ == "__main__":
-    cooking()
+    cooking_breakfast()
+    cooking_lunch()
