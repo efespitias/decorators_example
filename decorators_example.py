@@ -29,7 +29,12 @@ def cooking_batch(size: int, meal_type: Callable)  -> None:
     meal_type()
   print("###############")
 
+@add_time
+def baking(to_bake: str) -> None:
+   print(f"Baking a {to_bake}")
+   time.sleep(2)
 
 if __name__ == "__main__":
     cooking_batch(5, cooking_lunch )
+    baking("Brot")
     cooking_lunch()
